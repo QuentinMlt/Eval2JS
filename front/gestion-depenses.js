@@ -41,12 +41,12 @@ function genererFormsTaches(data) {
     return data.map(d => {
         return ` 
                     <tr>
-                        <td><form id="form1"><input form="form1" name="id" class="form-input" value="${d.id}" readonly></form></td>
-                        <td><input type="text" form="form1" name="name" class="form-input" value="${d.name}"></td>
-                        <td><input type="text" form="form1" name="montant" class="form-input" value="${d.montant}"></td>
+                        <td><form id="form${d.id}"><input form="form${d.id}" name="id" class="form-input" value="${d.id}" readonly></form></td>
+                        <td><input type="text" form="form${d.id}" name="name" class="form-input" value="${d.name}"></td>
+                        <td><input type="text" form="form${d.id}" name="montant" class="form-input" value="${d.montant}"></td>
                         <td>
-                        <input type="submit" form="form1" class="btn btn-primary mx-3" value="modifier">
-                        <input type="submit" form="form1" class="btn btn-danger" value="supprimer">
+                        <input type="submit" form="form${d.id}" class="btn btn-primary mx-3" value="modifier">
+                        <input type="submit" form="form${d.id}" class="btn btn-danger" value="supprimer">
                         </td>
                     </tr>
                 
